@@ -1,0 +1,138 @@
+html,body{
+	width: 100%;
+	height:70%;
+}
+#sp{
+	width: 100%;
+	height: 100%;
+}
+.kuang2{
+	width:100%;
+	margin:40% auto;
+	height:350px;
+    overflow: hidden;
+  }
+.mui-bar{
+	background: #00ffff;
+}
+ @-webkit-keyframes movedown{
+      	0%{
+      		-webkit-transform:translateY(-40px);
+      		opacity: 0;
+      	}
+      	100%{
+      		-webkit-transform:translateY(0px);
+      		opacity: 1;
+      	}
+      }
+       @-ms-keyframes movedown{
+      	0%{
+      		-ms-transform:translateY(-40px);
+      		opacity: 0;
+      	}
+      	100%{
+      		-ms-transform:translateY(0px);
+      		opacity: 1;
+      	}
+      }
+       @-o-keyframes movedown{
+      	0%{
+      		-o-transform:translateY(-40px);
+      		opacity: 0;
+      	}
+      	100%{
+      		-o-transform:translateY(0px);
+      		opacity: 1;
+      	}
+      }
+       @keyframes movedown{
+      	0%{
+      		transform:translateY(-40px);
+      		opacity: 0;
+      	}
+      	100%{
+      		transform:translateY(0px);
+      		opacity: 1;
+      	}
+      }
+@-webkit-keyframes updown{
+      	0%{
+      		transform:translateY(40px);
+      		opacity: 0;
+      	}
+      	100%{
+      		transform:translateY(0px);
+      		opacity: 1;
+      	}
+      }
+@-ms-keyframes updown{
+      	0%{
+      		transform:translateY(40px);
+      		opacity: 0;
+      	}
+      	100%{
+      		transform:translateY(0px);
+      		opacity: 1;
+      	}
+}
+@-o-keyframes updown{
+      	0%{
+      		transform:translateY(40px);
+      		opacity: 0;
+      	}
+      	100%{
+      		transform:translateY(0px);
+      		opacity: 1;
+      	}
+}
+@keyframes updown{
+      	0%{
+      		transform:translateY(40px);
+      		opacity: 0;
+      	}
+      	100%{
+      		transform:translateY(0px);
+      		opacity: 1;
+      	}
+}
+#nana{
+	 -webkit-animation:movedown 2s ease-in-out 1s backwards;
+    -ms-animation:movedown 2s ease-in-out 1s backwards;
+    -o-animation:movedown 2s ease-in-out 1s backwards;
+    animation:movedown 2s ease-in-out 1s backwards;
+}
+#qiqi{
+	-webkit-animation:updown 2s ease-in-out 2s backwards;
+    -ms-animation:updown 2s ease-in-out 2s backwards;
+    --animation:updown 2s ease-in-out 2s backwards;
+    animation:updown 2s ease-in-out 2s backwards;
+}
+#lihi{
+	 -webkit-animation:movedown 2s ease-in-out 3s backwards;
+    -ms-animation:movedown 2s ease-in-out 3s backwards;
+    -o-animation:movedown 2s ease-in-out 3s backwards;
+    animation:movedown 2s ease-in-out 3s backwards;
+}
+.minit{
+	width:80%;
+	height:20%;
+	margin:5% auto;
+	display: block;
+} 
+.kuang2 input{
+	width: 100%;
+	margin: auto;
+	height:50px;
+	background:white;
+	border: 2px solid aqua;
+}
+#ok{
+	font-size: 20px;
+	color: #000000;
+	margin-top: 5%;
+	background: aqua;
+	-webkit-animation:updown 3s ease-in-out 4s backwards;
+    -ms-animation:updown 3s ease-in-out 4s backwards;
+    -o-animation:updown 3s ease-in-out 4s backwards;
+    animation:updown 3s ease-in-out 4s backwards;
+}

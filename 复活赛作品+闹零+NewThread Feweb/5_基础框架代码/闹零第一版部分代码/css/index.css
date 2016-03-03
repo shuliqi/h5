@@ -1,0 +1,365 @@
+/*欢迎页(welcome)*/
+
+*{
+	padding: 0;
+	margin: 0;
+}
+html,body{
+	width:100%;
+	height: 100%;
+}
+#container{
+	width:100%;
+	height: 100%;
+	background: #00ffff;
+	overflow: hidden;
+}
+.tupianpei{
+	width: 70px;
+	height: 70px;
+	display: block;
+	margin-top:17%;
+	margin-left:10%;
+}
+.tupianpei img{
+	width: 60px;
+	height: 60px;
+}
+.tu2{
+	margin-left:15%;
+	margin-top:50%;
+}
+.tu3{
+	margin-left: 10%;
+	margin-top:20%;
+}
+.tu4{
+	margin-top: -30%;
+	margin-left:70%;
+}
+.tu5{
+	margin-top: -60%;
+	margin-left: 65%;
+}
+.tu6{
+	margin-top: -70%;
+	margin-left: 75%;
+}
+.tu7{
+	margin-top: -10%;
+	margin-left:10%;
+}
+.tu8{
+	margin-top: -65%;
+	margin-left:50%;
+}
+#mask{
+	width: 100%;
+	height: 100%;
+	margin-top: -100%;
+	position: absolute;
+	background:rgba(0,255,255,0.4);
+}
+.naoling{
+	display: block;
+	width: 200px;
+	height: 200px;
+	margin-left: 23%;
+	margin-top: 40%;
+	color: white;
+}
+.naoling h1{
+	width: 100%;
+	line-height: 300%;
+	font-size: 50px;
+	text-align: center;
+	height: 60%;
+	-webkit-animation:movedown 1s ease-in-out 0.2s backwards;
+    -ms-animation:movedown 1s ease-in-out 0.2s backwards;
+    -o-animation:movedown 1s ease-in-out 0.2sbackwards;
+    animation:movedown 1s ease-in-out 0.2s backwards;
+}
+ @-webkit-keyframes movedown{
+      	0%{
+      		-webkit-transform:translateY(-40px);
+      		opacity: 0;
+      	}
+      	100%{
+      		-webkit-transform:translateY(0px);
+      		opacity: 1;
+      	}
+      }
+       @-ms-keyframes movedown{
+      	0%{
+      		-ms-transform:translateY(-40px);
+      		opacity: 0;
+      	}
+      	100%{
+      		-ms-transform:translateY(0px);
+      		opacity: 1;
+      	}
+      }
+       @-o-keyframes movedown{
+      	0%{
+      		-o-transform:translateY(-40px);
+      		opacity: 0;
+      	}
+      	100%{
+      		-o-transform:translateY(0px);
+      		opacity: 1;
+      	}
+      }
+       @keyframes movedown{
+      	0%{
+      		transform:translateY(-40px);
+      		opacity: 0;
+      	}
+      	100%{
+      		transform:translateY(0px);
+      		opacity: 1;
+      	}
+      }
+.naoling h2{
+	width: 100%;
+	height: 20%;
+	text-align: center;
+	-webkit-animation:updown 1s ease-in-out 0.2s backwards;
+    -ms-animation:updown 1s ease-in-out 0.2s backwards;
+    --animation:updown 1s ease-in-out 0.2s backwards;
+    animation:updown 1s ease-in-out 0.2s backwards;
+}
+ @-webkit-keyframes updown{
+      	0%{
+      		transform:translateY(40px);
+      		opacity: 0;
+      	}
+      	100%{
+      		transform:translateY(0px);
+      		opacity: 1;
+      	}
+      }
+@-ms-keyframes updown{
+      	0%{
+      		transform:translateY(40px);
+      		opacity: 0;
+      	}
+      	100%{
+      		transform:translateY(0px);
+      		opacity: 1;
+      	}
+}
+@-o-keyframes updown{
+      	0%{
+      		transform:translateY(40px);
+      		opacity: 0;
+      	}
+      	100%{
+      		transform:translateY(0px);
+      		opacity: 1;
+      	}
+}
+@keyframes updown{
+      	0%{
+      		transform:translateY(40px);
+      		opacity: 0;
+      	}
+      	100%{
+      		transform:translateY(0px);
+      		opacity: 1;
+      	}
+}
+      
+      
+ /*slied*/
+body,html{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+#slide{
+	width: 300%;
+	height: 100%;
+	position: absolute;
+}
+.shu{
+	width: 33.33333333%;
+	height: 100%;
+	background:#00ffff;
+	float: left;
+}
+#icon{
+	width: 30%;
+	height: 20px;
+	margin-left: 35%;
+	margin-top:90%;
+	position: absolute;
+}
+.icont{
+	display: block;
+	width:13px;
+	height: 13px;
+	border-radius: 100%;
+	background: white;
+	margin-left: 13%;
+	float: left;
+}
+.icon1{
+	width: 17px;
+	height: 17px;
+}
+.shouye {
+	display: block;
+    width: 50%;
+    height: 30%;
+/*    background: #000;*/
+    margin-top: 50%;
+    margin-left: 30%;   
+}
+.shouye img{
+	-webkit-animation:movedown 1s ease-in-out 0.2s backwards;
+    -ms-animation:movedown 1s ease-in-out 0.2s backwards;
+    -o-animation:movedown 1s ease-in-out 0.2sbackwards;
+    animation:movedown 1s ease-in-out 0.2s backwards;
+}
+#slide h3{
+	text-align: center;
+	color: white;
+	font-size: 23px;
+	-webkit-animation:updown 0.7s ease-in-out 0.2s backwards;
+    -ms-animation:updown 0.7s ease-in-out 0.2s backwards;
+    -o-animation:updown 0.7s ease-in-out 0.2s backwards;
+    animation:updown 0.7s ease-in-out 0.2s backwards;
+}
+#star{
+	width: 50%;
+	height:9%;
+	margin: 10% auto;
+	display: block;
+	border: 1px solid #FFFFFF;
+	text-align: center;
+	line-height:220%;
+	color: #FFFFFF;
+	font-size: 25px;
+}
+
+
+
+
+
+/*首页*/
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.minddle{
+	margin-top: 45px;
+	width: 100%;
+	height: 100%;
+	background:#00ffff;
+/*	overflow: hidden;*/
+}
+.head{
+	width: 100%;
+	height: 6%;
+	padding-top: 3%;
+}
+.head img{
+	float: right;
+	margin-right: 4%;
+}
+
+
+/* HOME部分*/
+.neirong{
+	width: 100%;
+	height:25%;
+	color: white;
+	background:#00ffff;
+	margin-top:45px
+}
+.logo{
+	width: 20%;
+	margin-left: 4%;
+	height: 30%;
+	padding-top: 1%;
+	line-height: 200%;
+	font-size: 23px;
+}
+.biaoti{
+	width: 40%;
+	padding-left: 15%;
+	height: 20%;
+	line-height:200%;
+	font-size: 18px;
+	color: white;
+}
+.tixing{
+	width: 60%;
+	height: 46%;
+	padding-top: 4%;
+	color: white;
+	font-size: 18px;
+	margin-left: 4%;
+}
+
+.shiyong{
+	width: 100%;
+	height: 70%;
+	background: white;
+}
+.shouce{
+	width: 100%;
+	height: 60%;
+}
+.shoubiao{
+	width: 40%;
+	height: 15%;
+	padding-top:8%;
+	padding-left:4%;
+	font-size: 25px;
+	color: #C6C6C6;
+}
+.con{
+	width: 96%;
+	height: 35%;
+	padding-left:4%;
+	line-height: 45px;
+	padding-top:8%;
+	font-size: 20px;
+	color: #CCCCCC;
+}
+.mui-icon-info{
+	float: right;
+}
+.mui-bar{
+	width: 100%;;
+	height: 45px;
+    position: absolute;
+	background:#00ffff;
+	border-bottom: 1px solid #C0C0C0;
+	box-shadow:3px 3px 3px solid #ccc;
+}
+.title{
+	width: 80px;
+	height: 40px;
+	margin: 0 auto;
+	display: block;
+	margin-left: 10%;
+}
+.mui-slider-item img{
+	width: 100%;
+	height:90%;
+}
+.mui-table-view{
+	background: none;
+}
+.picture-btn img{
+	margin-left: 35%.;
+	width: 50px;
+	height: 50px;
+	background: #000;
+}
+#tianjia{
+    margin-left:40%;
+}
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="js/mui.min.js"></script>
+<link href="css/mui.min.css" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" href="css/moshi.css"/>
+</head>
+<body>	
+<header class="mui-bar mui-bar-nav" style="background: #00ffff;">
+	<span class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></span>
+	<h1 class="mui-title">图片配</h1>
+	<span id="ok" onclick="baocun();">
+		<h5>确定</h5>
+		<span class="mui-icon mui-icon-checkmarkempty"></span>
+	</span>	
+</header>
+<div class="mui-content">
+	<section class="jiejie">
+		<h4>图片配</h4>
+		<p>图片配模式的规则：保存闹钟之前选择图片配模式，首先你得拍一张照片，当闹零响起来的时候，你要再拍一张和原先你拍的照片相似度达到80%以上  闹铃便可以定下来</p>
+	</section>
+	<section id="yu" class="zhao">
+		<h4>进行拍照吧！！！！</h4>
+		<span class="hupian"  onclick="shareCameraPicture()">拍照</span>
+		<img class="zhanshi" id="pic" src="img/orientationa.png"/>
+	</section>
+</div>	
+	
+	
+<script type="text/javascript" charset="utf-8">
+mui.init();
+// H5 plus事件处理
+function plusReady(){
+	// 获取摄像头目录对象
+	plus.io.resolveLocalFileSystemURL( "_doc/", function ( entry ) {
+		entry.getDirectory( "camera", {create:true}, function ( dir ) {
+			gentry = dir;
+			updateHistory();
+		}, function ( e ) {
+			outSet( "Get directory \"camera\" failed: "+e.message );
+		} );
+	}, function ( e ) {
+		outSet( "Resolve \"_doc/\" failed: "+e.message );
+	} );
+}
+// 拍照
+var pic = null;
+var str = null;
+var ok = document.getElementById("ok");
+function shareCameraPicture(){
+	var cmr=plus.camera.getCamera();
+	cmr.captureImage(function(p){
+		plus.io.resolveLocalFileSystemURL(p,function(entry){
+			pic = document.getElementById("pic")
+			pic.src=entry.toLocalURL();
+			pic.realUrl=p;
+			ok.style.display = 'block';
+			str = p ;
+		},function(e){
+			alert("读取拍照文件错误："+e.message);
+		} );
+	},function(e){
+		alert( "拍照失败："+e.message );
+	});
+}
+var baocun = function(){
+}
+</script>
+</body>
+</html>

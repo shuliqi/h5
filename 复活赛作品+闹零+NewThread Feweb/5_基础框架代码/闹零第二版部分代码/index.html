@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+</head>
+<body>
+<section id="container">
+	<span class="tupianpei tu1"><img src="img/tupianpei.png"/></span>
+	<span class="tupianpei tu2"><img src="img/yidanchi.png"/></span>
+	<span class="tupianpei tu3"><img src="img/yaoyiyao.png"/></span>
+	<span class="tupianpei tu4"><img src="img/yidongjie.png"/></span>
+	<span class="tupianpei tu5"><img src="img/shaichengji.png"/></span>
+	<span class="tupianpei tu6"><img src="img/haoyoupei.png"/></span>
+	<span class="tupianpei tu7"><img src="img/xinaiqin.png"/></span>
+	<span class="tupianpei tu8"><img src="img/youxibang.png"/></span>
+</section>	
+<section id="mask">
+	<span class="naoling">
+		<h1>闹零</h1>
+		<h2>从零开始</h2>
+	</span>
+</section>	
+	
+	
+<script type="text/javascript" charset="utf-8">
+mui.preload({
+    url:"Introduction.html",
+    id:"Introduction",
+});
+setTimeout(function(){
+	mui.openWindow({
+		url:"Introduction.html",
+    	id:"Introduction",
+    	show:{
+      		aniShow:"fade-in",
+      	    duration:200,
+    	},
+    waiting:{
+      autoShow:false,
+     }
+	});
+},5000)
+</script>
+</body>
+</html>

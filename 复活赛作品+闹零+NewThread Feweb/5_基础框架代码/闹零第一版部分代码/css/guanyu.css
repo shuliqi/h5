@@ -1,0 +1,44 @@
+html,body{
+	width: 100%;
+	height: 110%;
+	background:#00ffff;
+ }
+#guanyu{
+	width: 100%;
+	height: 100%;
+}
+.guanyu{
+	width: 100%;
+	height:35%;
+	background:#00ffff;	
+}
+.guanyu h4{
+	padding: 4% 0 0 4%;
+}
+.guanyu h5{
+	padding: 4% 5% 0 4%;
+	text-indent:2em;
+	line-height: 30px;
+}
+.shiyong{
+	width: 100%;
+	height: 45%;
+	background: white;
+}
+.shiyong h4{
+	padding: 4% 0 0 4%;
+}
+.shiyong h5{
+	padding: 4% 5% 0 4%;
+	text-indent:2em;
+	line-height: 30px;
+}
+
+.tuandui h4{
+	padding: 4% 0 0 4%;
+}
+.tuandui h5{
+	padding: 4% 5% 0 4%;
+	text-indent:2em;
+	line-height: 30px;
+}

@@ -1,0 +1,65 @@
+html,body{
+	width: 100%;
+	height: 100%;
+
+}
+.mui-bar{
+	background:  #00ffff;
+}
+.mili{
+	width: 100%;
+	height:95%;
+	margin-top:12%;
+	display: block;
+	overflow: hidden;
+}
+.zhanghao{
+	width: 100%;
+	height:35%;
+	overflow: hidden;
+	padding-left:4%;
+	background:  #00ffff;
+}
+.zhanghao h4{
+	margin-top:4%;
+}
+.zhanghao h5{
+	padding: 4% 5% 0 4%;
+	text-indent:2em;
+	line-height: 30px;
+}
+.anquan{
+	width: 100%;
+	height: 65%;
+	overflow: hidden;
+}
+.anquan h4{
+	margin-top:4%;
+	padding-left: 4%;
+}
+.haoma{
+	width:94%;
+	height: 90%;
+	display: block;
+	margin: auto;
+}
+.haoma li{
+	list-style: none;
+	padding-left: -10%;
+}
+.haoma span{
+	width: 100%;
+	border-bottom: 1px solid #CCCCCC;
+	height: 15%;
+	display: block;
+	float: left;
+}
+.haoma span h5{
+	padding-left: 5%;
+	line-height: 260%;
+	font-size:17px;
+	float: left;
+}
+.wo{
+	margin-left: 40%;
+}

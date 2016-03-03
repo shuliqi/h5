@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="js/mui.min.js"></script>
+<link href="css/mui.min.css" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" href="css/caidan.css"/>
+</head>
+<body>
+<div id="cecaidan">
+	<div class="caidan" style="background: #00ffff; height: 135px;">
+	    
+	</div>
+	<div class="caidan">
+		<span class="denglu">
+			<img src="img/useradd.png"/>
+			<input type="button" name="use" id="use1" value="登录" />
+		</span>
+	</div>
+	<div class="caidan">
+		<span class="denglu">
+			<img src="img/user.png"/>
+			<input type="button" name="use" id="use2" value="注册" />
+		</span>
+	</div>
+	<div class="caidan">
+		<span class="denglu">
+			<img src="img/guanyu2.png"/>
+			<input type="button" name="use" id="use3" value="关于" />
+		</span>
+	</div>
+	<div class="caidan">
+		<span class="denglu">
+			<img src="img/shezhi2.png"/>
+			<input type="button" name="use" id="use4" value="查看" />
+		</span>
+	</div>
+	<div class="caidan">
+		<span class="denglu">
+			<img src="img/shezhi2.png"/>
+			<input type="button" name="use" id="use5" value="介绍" />
+		</span>
+	</div>
+</div>
+<script type="text/javascript">
+document.getElementById("use1").addEventListener('tap',function(){
+  mui.openWindow({
+    url: "denglu.html", 
+    show:{
+    	aniShow:"slide-in",
+    	diration:1000,
+    },
+    styles: {
+			left: 0,
+			width: '100%',
+			zindex:900,
+	},
+     waiting:{
+      options:{
+       style:"white",
+      },
+     },
+  });	
+},false)
+document.getElementById("use2").addEventListener('tap',function(){
+  mui.openWindow({
+    url: "zhuce.html", 
+    show:{
+    	aniShow:"slide-in",
+    	diration:1000,
+    },
+    styles: {
+			left: 0,
+			width: '100%',
+			zindex:900,
+	},
+     waiting:{
+      options:{
+       style:"white",
+      },
+     },
+  });	
+},false)
+document.getElementById("use3").addEventListener('tap',function(){
+  mui.openWindow({
+    url: "UseManual.html", 
+    show:{
+    	aniShow:"slide-in",
+    	diration:1000,
+    },
+    styles: {
+			left: 0,
+			width: '100%',
+			zindex:900,
+	},
+     waiting:{
+      options:{
+       style:"white",
+      },
+     },
+  });	
+},false)
+document.getElementById("use4").addEventListener('tap',function(){
+  mui.openWindow({
+    url: "shezhi.html", 
+    show:{
+    	aniShow:"slide-in",
+    	diration:1000,
+    },
+    styles: {
+			left: 0,
+			width: '100%',
+			zindex:900,
+	},
+     waiting:{
+      options:{
+       style:"white",
+      },
+     },
+  });	
+},false)
+//获得侧滑主窗口webview对象
+var main = null;
+mui.plusReady(function () {
+	main = plus.webview.currentWebview().opener();
+})
+function closeMenu () {
+	mui.fire(main,"menu:tap");
+}
+window.addEventListener("swipeleft",closeMenu);  
+mui.menu = closeMenu;
+</script>
+</body>
+</html>

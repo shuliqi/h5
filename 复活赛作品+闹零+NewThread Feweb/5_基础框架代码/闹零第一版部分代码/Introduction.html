@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/mui.min.js"></script>
+    	<link href="css/mui.min.css" rel="stylesheet"/>	
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<div id="Introduction">
+			<div id="slide">
+				<div class="shu shu1">
+					<section class="shouye">
+						<img src="img/shouye1.png"/>					
+					</section>
+					<h3>设好闹零，明天我要从零开始</h3>
+				</div>
+				<div class="shu shu2">
+					<section class="shouye">
+						<img src="img/shouye2.png"/>					
+					</section>
+					<h3>多种提醒，闹零根本停不下来</h3>
+				</div>
+				<div class="shu shu3">
+					<section class="shouye">
+						<img src="img/shouyw3.png"/>					
+					</section>
+					<h3>我闹！你醒！</h3>
+					<span id="star">从零开始</span>
+				</div>
+			</div>
+			<span id="icon">
+				<span class="icont icon1"></span>
+				<span class="icont"></span>
+				<span class="icont"></span>
+			</span>
+		</div>
+
+<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+mui.preload({
+    url:"Home.html",
+    id:"Home",
+});
+mui.preload({
+ 		url:"content.html",
+ 	   	id:"content",
+});
+var ostart = document.getElementById("star");
+ostart.addEventListener('click',function(){
+	mui.openWindow({
+		url:"Home.html",
+    	id:"Home",
+    	show:{
+      		aniShow:"fade-in",
+      	    duration:1000,
+    	},
+    waiting:{
+      autoShow:false,//自动显示等待框，默认为true
+     }
+	});
+},false)
+
+</script>
+	</body>
+</html>

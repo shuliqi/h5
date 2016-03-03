@@ -1,0 +1,131 @@
+html,body{
+	width: 100%;
+	height:70%;
+}
+#sp{
+	width: 100%;
+	height: 100%;
+}
+.kuang{
+	width:100%;
+	margin:40% auto;
+	height:300px;
+    overflow: hidden;
+  }
+.mui-bar{
+	background: #00ffff;
+}
+ @-webkit-keyframes movedown{
+      	0%{
+      		-webkit-transform:translateY(-40px);
+      		opacity: 0;
+      	}
+      	100%{
+      		-webkit-transform:translateY(0px);
+      		opacity: 1;
+      	}
+      }
+       @-ms-keyframes movedown{
+      	0%{
+      		-ms-transform:translateY(-40px);
+      		opacity: 0;
+      	}
+      	100%{
+      		-ms-transform:translateY(0px);
+      		opacity: 1;
+      	}
+      }
+       @-o-keyframes movedown{
+      	0%{
+      		-o-transform:translateY(-40px);
+      		opacity: 0;
+      	}
+      	100%{
+      		-o-transform:translateY(0px);
+      		opacity: 1;
+      	}
+      }
+       @keyframes movedown{
+      	0%{
+      		transform:translateY(-40px);
+      		opacity: 0;
+      	}
+      	100%{
+      		transform:translateY(0px);
+      		opacity: 1;
+      	}
+      }
+@-webkit-keyframes updown{
+      	0%{
+      		transform:translateY(40px);
+      		opacity: 0;
+      	}
+      	100%{
+      		transform:translateY(0px);
+      		opacity: 1;
+      	}
+      }
+@-ms-keyframes updown{
+      	0%{
+      		transform:translateY(40px);
+      		opacity: 0;
+      	}
+      	100%{
+      		transform:translateY(0px);
+      		opacity: 1;
+      	}
+}
+@-o-keyframes updown{
+      	0%{
+      		transform:translateY(40px);
+      		opacity: 0;
+      	}
+      	100%{
+      		transform:translateY(0px);
+      		opacity: 1;
+      	}
+}
+@keyframes updown{
+      	0%{
+      		transform:translateY(40px);
+      		opacity: 0;
+      	}
+      	100%{
+      		transform:translateY(0px);
+      		opacity: 1;
+      	}
+}
+#lina{
+	 -webkit-animation:movedown 1s ease-in-out 0.2s backwards;
+    -ms-animation:movedown 1s ease-in-out 0.2s backwards;
+    -o-animation:movedown 1s ease-in-out 0.2sbackwards;
+    animation:movedown 1s ease-in-out 0.2s backwards;
+}
+#liqi{
+	-webkit-animation:updown 2s ease-in-out 2s backwards;
+    -ms-animation:updown 2s ease-in-out 2s backwards;
+    --animation:updown 2s ease-in-out 2s backwards;
+    animation:updown 2s ease-in-out 2s backwards;
+}
+.minit{
+	width:80%;
+	height:25%;
+	margin:5% auto;
+	display: block;
+} 
+.kuang input{
+	width: 100%;
+	margin: auto;
+	height:50px;
+	background:white;
+	border: 2px solid aqua;
+}
+#lohin{
+	font-size: 20px;
+	color: #000000;
+	background: aqua;
+	-webkit-animation:updown 3s ease-in-out 3s backwards;
+    -ms-animation:updown 3s ease-in-out 3s backwards;
+    -o-animation:updown 3s ease-in-out 3s backwards;
+    animation:updown 3s ease-in-out 3s backwards;
+}

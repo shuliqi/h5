@@ -1,0 +1,38 @@
+html,body{
+	width: 100%;
+	height: 105%;
+}
+#cecaidan{
+   	width: 100%;
+   	height: 100%;
+  overflow: hidden;
+} 
+.caidan{
+	width: 100%;
+	height: 60px;
+	border-bottom: 1px solid #CCCCCC;
+	background: white;
+}
+.denglu{
+	width: 92%;
+	height:50px;
+	margin-left:8%;
+	margin-top: 40px;
+	display: block;
+}
+.denglu img{
+	width: 30px;
+	height:30px;
+	margin-top: 5px;
+
+	float: left;
+}
+.denglu input{
+	width: 40%;
+	height: 70%;
+	float: left;
+	border: none;
+	color: #ACACB4;
+	margin-top: 4px;
+	font-size: 20px;
+}

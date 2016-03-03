@@ -1,0 +1,71 @@
+/*模式*/
+html,body{
+	width: 100%;
+	height: 100%;
+}
+.mui-content{
+   width: 100%;
+   height: 100%;
+   background: white;	
+ }
+ .jiejie{
+ 	width: 100%;
+ 	height: 200px;
+ 	background: #00ffff;
+ 	overflow: hidden;
+ }
+ .jiejie h4{
+ 	padding-top: 10px;
+ 	padding-left: 13px;
+ }
+.jiejie p{
+	padding: 4% 5% 0 4%;
+	text-indent:2em;
+	line-height: 30px;
+}
+.zhao{
+	width: 100%;
+	height:65%;
+	overflow: hidden;
+}
+.zhao h4{
+	padding-top: 10px;
+ 	padding-left: 13px;
+ 	
+}
+.hupian{
+	width: 92%;
+	height:15%;
+	margin: 0px auto;
+	margin-top: 20px;
+	display: block;
+	border:2px solid #00ffff;
+	color: #00ffff;
+	text-align: center;
+	font-size:30px;
+	line-height: 160%;
+}
+.zhanshi{
+	width: 92%;
+	height:65%;
+	margin:3% 4%;
+	border:2px solid #00ffff;
+}
+#ok{
+	width: 50px;
+	margin-top: 10px;
+	height: 30px;
+	float: right;
+	display: none;
+}
+#ok h5{
+	float: left;
+	margin-top: 8px;
+	color: #000000;
+}
+.mui-icon-checkmarkempty{
+	margin-top: -8px;
+	float:left;
+	width: 10px;
+	height: 10px;
+}

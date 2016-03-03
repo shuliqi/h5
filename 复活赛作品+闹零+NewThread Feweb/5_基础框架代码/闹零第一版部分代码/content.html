@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="js/mui.min.js"></script>
+   <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/mui.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<style type="text/css">
+body,html{
+	background:#00FFFF;
+}
+.animated {
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+@-webkit-keyframes bounceInDown {
+	0%, 60%, 75%, 90%, 100% {
+		-webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	}
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+	60% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 25px, 0);
+		transform: translate3d(0, 25px, 0);
+	}
+	75% {
+		-webkit-transform: translate3d(0, -10px, 0);
+		transform: translate3d(0, -10px, 0);
+	}
+	90% {
+		-webkit-transform: translate3d(0, 5px, 0);
+		transform: translate3d(0, 5px, 0);
+	}
+	100% {
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+@keyframes bounceInDown {
+	0%, 60%, 75%, 90%, 100% {
+		-webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	}
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+	60% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 25px, 0);
+		transform: translate3d(0, 25px, 0);
+	}
+	75% {
+		-webkit-transform: translate3d(0, -10px, 0);
+		transform: translate3d(0, -10px, 0);
+	}
+	90% {
+		-webkit-transform: translate3d(0, 5px, 0);
+		transform: translate3d(0, 5px, 0);
+	}
+	100% {
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+.bounce-in-down {
+	-webkit-animation-name: bounceInDown;
+	animation-name: bounceInDown;
+}
+@-webkit-keyframes fadeInDown {
+	0%, 60%, 75%, 90%, 100% {
+		-webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	}
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+	60% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0px, 0);
+		transform: translate3d(0, 0px, 0);
+	}
+	75% {
+		-webkit-transform: translate3d(0, 0px, 0);
+		transform: translate3d(0, 0px, 0);
+	}
+	90% {
+		-webkit-transform: translate3d(0, 0px, 0);
+		transform: translate3d(0, 0px, 0);
+	}
+	100% {
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+@keyframes fadeInDown {
+	0%, 60%, 75%, 90%, 100% {
+		-webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	}
+	0% {
+	opacity: 0;
+	-webkit-transform: translate3d(0, -100%, 0);
+	transform: translate3d(0, -100%, 0);
+	}
+	60% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0px, 0);
+		transform: translate3d(0, 0px, 0);
+	}
+	75% {
+		-webkit-transform: translate3d(0, 0px, 0);
+		transform: translate3d(0, 0px, 0);
+	}
+	90% {
+		-webkit-transform: translate3d(0, 0px, 0);
+		transform: translate3d(0, 0px, 0);
+	}
+	100% {
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+.fade-in-down {
+	-webkit-animation-name: fadeInDown;
+	animation-name: fadeInDown;
+}
+@-webkit-keyframes bounceOutUp {
+ 	20% {
+		-webkit-transform: translate3d(0, -10px, 0);
+		transform: translate3d(0, -10px, 0);
+	}
+	40%,
+	45% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 20px, 0);
+		transform: translate3d(0, 20px, 0);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+}
+@keyframes bounceOutUp {
+	20% {
+		-webkit-transform: translate3d(0, -10px, 0);
+		transform: translate3d(0, -10px, 0);
+	}
+	40%,
+	45% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 20px, 0);
+		transform: translate3d(0, 20px, 0);
+		}
+	100% {
+	opacity: 0;
+	-webkit-transform: translate3d(0, -100%, 0);
+	transform: translate3d(0, -100%, 0);
+	}
+}
+.bounce-out-up {
+-webkit-animation-name: bounceOutUp;
+animation-name: bounceOutUp;
+}
+@-webkit-keyframes fadeOutUp {
+	20% {
+	-webkit-transform: translate3d(0, 0px, 0);
+	transform: translate3d(0, 0px, 0);
+	}
+	40%,
+	45% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0px, 0);
+		transform: translate3d(0, 0px, 0);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+}
+@keyframes fadeOutUp {
+	20% {
+		-webkit-transform: translate3d(0, 0px, 0);
+		transform: translate3d(0, 0px, 0);
+	}
+	40%,
+	45% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0px, 0);
+		transform: translate3d(0, 0px, 0);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+}
+.fade-out-up {
+	-webkit-animation-name: fadeOutUp;
+	animation-name: fadeOutUp;
+}
+.menu-open {
+	height: 100%;
+	width: 100%;
+}
+.menu-open .mui-scroll-wrapper {
+	position: absolute;
+	top: 48;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+}
+.menu-backdrop {
+	display: none;
+}
+.menu-open .menu-backdrop {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	display: block;
+	z-index: 998;
+}
+.menu-wrapper {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	text-align: center;
+	background-color: white;
+	width: 100%;
+	height: 100%;
+}
+.menu-wrapper.hidden {
+	-webkit-transform: translate3d(0, -100%, 0);
+	transform: translate3d(0, -100%, 0);
+	z-index: -1;
+}
+.menu {
+	width: 100%;
+}
+.menu .mui-table-view-inverted {
+	color: gray;
+	font-size: 19px;
+}
+.menu .mui-table-view-inverted .mui-table-view-cell:after {
+	height: 2px;
+	left: 0;
+	right: 0;
+}
+.menu-wrapper.mui-active,
+.menu-wrapper.mui-active .menu {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+#info{
+	padding: 20px 10px ;
+}
+.mui-table-view-cell{
+	width: 100%;
+	height: 60px;
+
+}
+.mui-table-view-cell h4{
+	width: 50px;
+	height: 40px;
+	float: left;
+	color: #000000;
+	
+}
+.mui-table-view-cell input{
+	width:30%;
+	height: 40px;
+	float: right;
+	border: none;
+	color: #000000
+}
+.chongfu{
+	width: 85%;
+	height:80%;
+	margin-top: 20px;
+	margin-left: 7.3%;
+	background: #00ffff;
+	position: absolute;
+	z-index: 4000000;
+}
+.oTitle{
+	color: white;
+	width: 100%;
+	height: 50px;
+	font-size: 20px;
+	padding-left: 10%;
+	line-height: 300%;
+	border-bottom: 1px solid blue;
+}
+.music{
+	width: 100%;
+	height: 310px;
+}
+.music li{
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #CCCCCC;
+	list-style: none;
+	padding: 15px 0 0 20px;
+}
+.music p{
+	float: left;
+	color: #000000;
+	font-size: 17px;
+}
+.music li button{
+	display: block;
+	line-height: 100%;
+	text-align: center !important;
+	float: right;
+	margin-top: -5px;
+	margin-right: 5px;
+	color: #000000;
+	font-size: 14px;
+}
+
+
+
+
+#moshi{
+	width: 100%;
+	height:33%;
+	position: absolute;
+	border: 1.5px solid #000000;
+	border-top: none;
+}
+#moshi img{
+	width: 30px;
+	height: 30px;
+}
+#moshi .mui-media-body {
+	font-size: 12px;
+}
+.sang{
+	width: 21px;
+	height: 21px;
+	top: -16%;
+	border-top: 1.6px solid #000000;
+	border-left: 1.6px solid #000000;
+	-moz-transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	-o-transform:rotate(45deg);  
+	-ms-transform:rotate(45deg); 
+	transform:rotate(45deg); 
+	left: 10%;
+	margin-top: 20px;
+	background: white;
+	position: absolute;
+	
+}
+.moshi{
+	width: 100%;
+	height: 40%;
+	float: left;
+	margin-top: 5%;
+	display: block;
+}
+.moshi ul li{
+	list-style: none;
+	float: left;
+	margin-left: 8%;
+}
+.moshi ul li p{
+	margin-top: -10px;
+}
+.mui-grid-9 li {
+	width: 25%;
+	height: 100%;
+	float: left !important;
+	border: none !important;
+	background: none !important;
+}
+
+.mui-slider-indicator{
+	bottom: -4px;
+}
+.mui-col-sm-3 a{
+}
+.mui-icon-home{
+}
+.baocun{
+	width: 100%;
+	height: 11%;
+	bottom: 0px;
+	
+	position:fixed;
+	z-index: 700000;
+	background: white;
+}
+#baocun{
+	float: left;
+	padding-top: 4%;
+	margin-left: 8%;
+}
+#quxiao{
+	float: right;
+	padding-top: 4%;
+	margin-right: 8%;
+}
+#clock{
+	width: 100%;
+	height: 145%;
+	position: absolute;
+	overflow: hidden;
+}
+
+.timer{
+	width: 100%;
+	height:74px;
+	left: 0px;
+	border-top: 1px  solid #000;
+	overflow: hidden;
+	background: white;
+}
+#img{
+	width:60px;
+	display: block;
+	margin-top: 7px;
+	height: 60px;
+	float: left;
+	margin-left:4%;
+}
+#neirong{
+	width:45%;
+	height: 60px;
+	display: block;
+	float: left;
+	margin-left: 16%;
+	margin-top: 7px;
+}
+#neirong h6{
+	padding-top: 5%;
+}
+.mui-switch1{
+	margin-top: 25px;
+	float: left;
+	margin-left: -1%;
+}
+#menu-wrapper{
+	width: 100%;
+	height: 145%;
+}
+.biaoqian{
+	width:100%;
+	height: 7%;
+	margin-top: 25%;
+	border-bottom: 1px solid #000000;
+}
+.biaoqian h4{
+	width: 20%;
+	height: 90%;
+	line-height: 380%;
+	display: block;
+	color: #000000;
+	float: left;
+	font-family:微软雅黑;
+}
+.input{
+	width: 75%;
+	height: 100%;
+	float: left;
+	border: none;
+}
+.caidan{
+	width: 100%;
+	height: 10%;
+	background: white;
+	border: 1px solid #CCCCCC;
+	position: fixed;
+	bottom: 0px;
+	z-index: 90000;
+}
+.slq1{
+	float: left;
+	margin-left: 6%;
+	width: 50px;
+	height: 50px;
+	line-height: 360%;
+	text-align: center;
+}
+.slq{
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin-left: 23%;
+	line-height: 360%;
+	text-align: center;
+}
+#menu-btn{
+	background: yellow;
+}
+</style>
+<body>
+<div id="content" >
+	<div id="clock">
+		<div class="timer" id="jjj">
+			<img id="img" src="img/baitian.png" ></img>
+			<span id="neirong" id="menu-btn1" onclick="toggleMenu(this.id);">
+				<h3>12:00</h3>
+				<h6>好友配</h6>
+			</span>
+			<div class="mui-switch mui-switch1">
+				<div class="mui-switch-handle"></div>
+			</div>	
+		</div>
+		<div class="timer" >
+			<img id="img" src="img/wanshang.png"></img>
+			<span id="neirong" id="menu-btn3" onclick="toggleMenu(this.id);">
+				<h3>12:00</h3>
+				<h6>晒糗事</h6>
+			</span>
+			<div class="mui-switch mui-switch1">
+				<div class="mui-switch-handle"></div>
+			</div>	
+		</div>
+		<div class="timer" >
+			<img id="img" src="img/baitian.png"></img>
+			<span id="neirong" id="menu-btn4" onclick="toggleMenu(this.id);">
+				<h3>12:00</h3>
+				<h6>移距离</h6>
+			</span>
+			<div class="mui-switch mui-switch1">
+				<div class="mui-switch-handle"></div>
+			</div>	
+		</div>
+		<div class="timer" >
+			<img id="img" src="img/wanshang.png"></img>
+			<span id="neirong" id="menu-btn5" onclick="toggleMenu(this.id);">
+				<h3>12:00</h3>
+				<h6>好友配</h6>
+			</span>
+			<div class="mui-switch mui-switch1">
+				<div class="mui-switch-handle"></div>
+			</div>	
+		</div>
+		<div class="timer" >
+			<img id="img" src="img/baitian.png"></img>
+			<span id="neirong"id="menu-btn6" onclick="toggleMenu(this.id);">
+				<h3>12:00</h3>
+				<h6>摇一摇</h6>
+			</span>
+			<div class="mui-switch mui-switch1">
+				<div class="mui-switch-handle"></div>
+			</div>	
+		</div>
+		<div class="timer">
+			<img id="img" src="img/wanshang.png"></img>
+			<span id="neirong" id="menu-btn7" onclick="toggleMenu(this.id);">
+				<h3>12:00</h3>
+				<h6>图片配</h6>
+			</span>
+			<div class="mui-switch mui-switch1">
+				<div class="mui-switch-handle"></div>
+			</div>	
+		</div>
+		<div class="timer">
+			<img id="img" src="img/baitian.png"></img>
+			<span id="neirong" id="menu-btn8" onclick="toggleMenu(this.id);">
+				<h3>12:00</h3>
+				<h6>好友配</h6>
+			</span>
+			<div class="mui-switch mui-switch1">
+				<div class="mui-switch-handle"></div>
+			</div>	
+		</div>
+		<div class="timer" >
+			<img id="img" src="img/wanshang.png"></img>
+			<span id="neirong" id="menu-btn9" onclick="toggleMenu(this.id);">
+				<h3>12:00</h3>
+				<h6>忆单词</h6>
+			</span>
+			<div class="mui-switch mui-switch1">
+				<div class="mui-switch-handle"></div>
+			</div>	
+		</div>
+	<div class="caidan">
+		<span class="slq1"><img src="img/jiesao0.png"/></span>
+		<span class="slq" id="menu-btn-icon" onclick="toggleMenu(this.id);" ><img src="img/jiahao.png"/></span>
+		<span class="slq"><img src="img/setting.png"/></span>
+	</div>
+	</div>	
+	<div id="menu-wrapper" class=" zong menu-wrapper hidden">
+		<div id="menu" class="menu" style="width: 100%;height: 100%;">
+			<ul class="mui-table-view mui-table-view-inverted" style="width: 100%;height: 100%">
+				<li  id="pickTimeBtn" class="mui-table-view-cell">
+					<h4>时间</h4>
+					<input type="text"  value="00:00">
+				</li>
+				<li id="lingsheng" class="mui-table-view-cell">
+					<h4>铃声</h4>
+					<input type="text"  value="明明就">
+				</li>
+				<li class="mui-table-view-cell">
+					<h4>振动</h4>
+					<div class="mui-switch">
+						<div class="mui-switch-handle"></div>
+					</div>	
+				</li>
+				<li class="mui-table-view-cell" id="paten" >
+					<h4 style="width: 80px;">关闭方式</a></h4>
+					<input type="text"  value="图片配">
+				</li>
+				<div id="moshi" style="height: 200px">
+					<span class="sang"></span>
+					<div id="Gallery" class="mui-slider" style=" height:100%;">
+						<div class="mui-slider-group" style="height:100%;">
+							<div class="mui-slider-item">
+								<ul class="mui-table-view mui-grid-view mui-grid-9">
+									<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+										<a id="7" href="#" onclick="moshi(this.id)">
+											<img src="img/tupei.gif"/>
+											<div class="mui-media-body">图片配</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+										<a id="8" href="#" onclick="moshi(this.id)">
+											<img src="img/xianaixin.gif"/>
+											<div class="mui-media-body">献爱心</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+										<a id="9" href="#" onclick="moshi(this.id)">
+											<img src="img/share.gif"/>
+											<div class="mui-media-body">献糗事</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+										<a id="10" href="#" onclick="moshi(this.id)">
+											<img src="img/words.gif"/>
+											<div class="mui-media-body">忆单词</div>
+										</a>
+									</li>				
+								</ul>
+								<div class="baocun" onclick="play();" style="width: 100px;height: 50px; background:red;margin-top: -400px;position: absolute;z-index: 600000;">保存</div>
+							</div>
+							<div class="mui-slider-item">
+								<ul class="mui-table-view mui-grid-view mui-grid-9">
+									<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+										<a id="11" href="#" onclick="moshi(this.id)">
+											<img src="img/frenid.gif"/>
+											<div class="mui-media-body">好友配</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+										<a id="12" href="#" onclick="moshi(this.id)">
+											<img src="img/yaoyao.gif"/>
+											<div class="mui-media-body">摇一摇</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+										<a id="13" href="#" onclick="xuanzhe(this.id)">
+											<img src="img/youxi.gif"/>
+											<div class="mui-media-body">游戏帮</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+										<a id="14" href="#" onclick="xuanzhe(this.id)">
+											<img src="img/yijuli.gif"/>
+											<div class="mui-media-body">移距离</div>
+										</a>
+									</li>																														
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</ul>
+		</div>			
+	</div>
+	<div id="menu-backdrop" class="menu-backdrop"></div>	
+</div>
+<script type="text/javascript">
+mui.init({
+	swipeBack:true ,
+});
+
+//弹出设置
+var menuWrapper = document.getElementById("menu-wrapper");
+var menu = document.getElementById("menu");
+var menuWrapperClassList = menuWrapper.classList;
+var backdrop = document.getElementById("menu-backdrop");
+var info = document.getElementById("info");
+backdrop.addEventListener('tap', toggleMenu);
+function toggleMenu() {
+	busying = true;
+	if (menuWrapperClassList.contains('mui-active')) {
+		document.body.classList.remove('menu-open');
+		menuWrapper.className = 'menu-wrapper fade-out-up animated';
+		menu.className = 'menu bounce-out-up animated';
+		setTimeout(function() {
+			backdrop.style.opacity = 0;
+			menuWrapper.classList.add('hidden');
+		}, 500);
+	} else {
+		document.body.classList.add('menu-open');
+		menuWrapper.className = 'menu-wrapper fade-in-down animated mui-active';
+		menu.className = 'menu bounce-in-down animated';
+		backdrop.style.opacity = 1;
+	}
+	
+}		
+//选择时间
+var oInput = document.getElementById("pickTimeBtn").getElementsByTagName('input')[0];
+document.getElementById("pickTimeBtn").addEventListener('tap',function(){
+	var dTime=new Date();
+	dTime.setHours(12,0);
+	plus.nativeUI.pickTime(function(e){
+		var d=e.date;
+		oInput.value =zhuan(d.getHours())+":"+zhuan(d.getMinutes());
+	},function (e){
+		oInput.value = "您没有选择时间" 
+	},{title:"请选择时间",is24Hour:true,time:dTime});
+},false)
+function zhuan(n){
+	if (n<10) {
+		 return '0'+n;
+	}
+	 else{
+		 return ''+ n;
+	};
+}
+
+//铃声
+var oSinput = document.getElementById("paten").getElementsByTagName('input')[0];
+var oDiv = null;
+var oMinput = document.getElementById("lingsheng").getElementsByTagName('input')[0];
+document.getElementById("lingsheng").addEventListener('tap',function(){
+    oDiv = document.createElement('div');
+    oDiv.className = "chongfu";
+    oDiv.innerHTML = '\
+    <div class="oTitle">铃声</div>\
+    <div>\
+    	<ul class="music">\
+    		<li>\
+    			<p>彩虹</p>\
+    			<button type="button" class="mui-btn mui-btn-outlined" id="1" onclick="xuanzhe(this.id);" >选择</button>\
+    		</li>\
+    		<li>\
+    			<p>搁浅</p>\
+    			<button type="button" class="mui-btn mui-btn-outlined" id="2" onclick="xuanzhe(this.id);" >选择</button>\
+    		</li>\
+    		<li>\
+    			<p>那些年</p>\
+    			<button type="button" class="mui-btn mui-btn-outlined" id="3" onclick="xuanzhe(this.id);" >选择</button>\
+    		</li>\
+    		<li>\
+    			<p>情歌</p>\
+    			<button type="button" class="mui-btn mui-btn-outlined" id="4" onclick="xuanzhe(this.id);" >选择</button>\
+    		</li>\
+    		<li>\
+    			<p>燃点</p>\
+    			<button type="button" class="mui-btn mui-btn-outlined" id="5" onclick="xuanzhe(this.id);" >选择</button>\
+    		</li>\
+    		<li>\
+    			<p>喜欢你</p>\
+    			<button type="button" class="mui-btn mui-btn-outlined" d="6">选择</button>\
+    		</li>\
+    	</ul>\
+    </div>'
+    var oConent = document.getElementById("content");
+    oConent.appendChild(oDiv);   	
+},false);
+var xuanzhe = function(id){
+	oDiv.style.display = 'none';
+	if (id == 1) {
+		oMinput.value =" 彩虹";
+		oMinput.id = 1;
+		console.log(oMinput.id);
+	}
+	else if(id == 2){
+		oMinput.value =" 搁浅";
+		oMinput.id = 2;
+	}
+	else if(id == 3){
+		oMinput.value =" 那些年";
+		oMinput.id = 3;
+	}
+	else if(id == 4){
+		oMinput.value =" 情歌";
+		oMinput.id = 4;
+	}
+	else if(id == 5){
+		oMinput.value =" 燃点";
+		oMinput.id = 5;
+	}
+	else if(id == 6){
+		oMinput.value =" 喜欢你";
+		oMinput.id = 6
+	}
+	console.log(oMinput.id);
+}
+var timer  = null;
+var play = function(){
+// 扩展API加载完毕后调用onPlusReady回调函数 
+	function plusReady(){
+	// 获取音频目录对象
+		plus.io.resolveLocalFileSystemURL( "_doc/", function ( entry ) {
+			entry.getDirectory( "audio", {create:true}, function ( dir ) {
+			}, function ( e ) {
+				outSet( "Get directory \"audio\" failed: "+e.message );
+			} );
+		}, function ( e ) {
+			outSet( "Resolve \"_doc/\" failed: "+e.message );
+		} );
+	}
+	if(window.plus){
+		plusReady();
+	}else{
+		document.addEventListener("plusready",plusReady,false);
+	}
+	var oT= document.getElementById("pickTimeBtn").getElementsByTagName('input')[0].value;
+	var oTimer0 = oT[0];
+	var oTimer1 = oT[1];
+	var oTimer3 = oT[3];
+	var oTimer4 = oT[4];
+	var end_oHours = parseInt(oTimer0 + oTimer1);
+	var end_oMinute = parseInt(oTimer3 + oTimer4);
+	var oDate = new Date();
+	var now_Hours = oDate.getHours();
+	var now_Minute = oDate.getMinutes();
+	var guanbi = (end_oHours * 60 + end_oMinute) - (now_Hours * 60 + now_Minute)
+	var  music = setInterval(function(){
+	guanbi = guanbi - 1;
+	console.log(guanbi);
+	if(guanbi == 0){
+		startPlay();
+		clearInterval(music);
+	}
+	},60000);
+
+}
+var p = null;
+function startPlay() {
+	alert("shdush")
+	
+	if ( plus.audio == undefined ) {
+		alert( "Device not ready!" );
+	}
+	else if(oMinput.id == 1){
+		p = plus.audio.createPlayer( "_www/Audio/caihong.mp3" );
+		p.play( function () {
+		}, function ( e ) {
+		} ); 
+	}
+	else if(oMinput.id == 2){
+		p = plus.audio.createPlayer( "_www/Audio/geqian.mp3" );
+		p.play( function () {
+		}, function ( e ) {
+		} ); 
+	}
+	else if(oMinput.id == 3){
+		p = plus.audio.createPlayer( "_www/Audio/naxienian.mp3" );
+		p.play( function () {
+		}, function ( e ) {
+		} ); 
+	}
+	else if(oMinput.id == 4){
+		p = plus.audio.createPlayer( "_www/Audio/qingge.mp3" );
+		p.play( function () {
+		}, function ( e ) {
+		} ); 
+	}
+	else if(oMinput.id == 5){
+		p = plus.audio.createPlayer( "_www/Audio/randian.mp3" );
+		p.play( function () {
+		}, function ( e ) {
+		} ); 
+	}
+	else if(oMinput.id == 6){
+		p = plus.audio.createPlayer( "_www/Audio/xihuanni.mp3" );
+		p.play( function () {
+		}, function ( e ) {
+		} ); 
+	}
+
+}
+function stopPlay() {
+	p.stop();
+}
+
+
+
+
+var moshi = function(id){
+	if(id == 7){
+		oSinput.value =" 图片配";
+		mui.openWindow({
+   	 		url: "tupianpei.html", 
+    		id:"tupianpei",
+    		show:{
+    			aniShow:"slide_left",
+    			diration:1000,
+   	 		},
+     		waiting:{
+      			options:{
+      			style:"white",
+      			},
+     		},
+  		});
+  		
+	}
+	else if(id == 8){
+		oSinput.value =" 献爱心";
+		mui.openWindow({
+   	 		url: "xianaixin.html", 
+    		id:"xianaixin",
+    		show:{
+    			aniShow:"fade-in",
+    			diration:1000,
+   	 		},
+     		waiting:{
+      			options:{
+      			style:"white",
+      			},
+     		},
+  		});
+	}
+	else if(id == 9){
+		oSinput.value =" 晒糗事";
+	}
+	else if(id == 10){
+		oSinput.value ="忆单词";
+	}
+	else if(id ==11){
+		oSinput.value =" 好友配";
+	}
+	else if(id == 12){
+		oSinput.value =" 摇一摇";
+	}
+	else if(id == 13){
+		oSinput.value =" 游戏帮";
+	}
+	else if(id ==14){
+		oSinput.value =" 移距离";
+	}
+}
+
+var items = document.querySelectorAll('.menuItem');
+for(var i = 0, l = items.length; i < l; i++) {
+  items[i].style.left = (50 - 35*Math.cos(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
+  items[i].style.top = (50 + 35*Math.sin(-0.5 * Math.PI - 2*(1/l)*i*Math.PI)).toFixed(4) + "%";
+}
+//document.getElementById("jjj").addEventListener("swipeleft",function(){
+//	alert("shu");
+//	var x = document.documentElement.clientWidth;
+//	alert(x);
+//	m = x - 400;
+//	document.getElementById("jjj").cssText =
+//});
+
+</script>
+</body>
+</html>

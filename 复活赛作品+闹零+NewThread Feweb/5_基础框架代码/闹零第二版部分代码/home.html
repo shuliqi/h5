@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+   <style type="text/css">
+
+   </style>
+</head>
+<body>
+<div id="home-container">
+	<section class="home-naoling">
+		<div class="home-left">
+			<h1>闹零</h1>
+			<h3>从零开始</h3>
+		</div>
+		<div class="home-right">
+			<h1 >12:35</h1>
+			<h4>2015-05-28 星期四</h4>
+		</div>
+	</section>
+	<section class="home-timer">
+		<div class="home-tips home-tip1"><h4>更多体验，向右快速滑动可登录</h4></div>
+		<div class="home-tips home-tip2"><h4>点击下面的“添加”添加闹零吧</h4></div>
+	</section>
+	<div id="showUserPicker">添加</div>
+	<!--弹出的选择关闭模式-->
+	<div class="user-panel mui-picker-panel" id="home-con">
+		<div class="home-close">选择关闭模式</div>
+		<div class="home-moshi">
+			<div class="home-margin">
+				<span> 
+					<div id="yapyao"><img src="img/tupei.gif"/></div>
+					<h5>摇一摇</h5>
+				</span>
+				<span> 
+					<div><img src="img/tupei.gif"/></div>
+					<h5>图片配</h5>
+				</span>
+				<span> 
+					<div><img src="img/tupei.gif"/></div>
+					<h5>好友配</h5>
+				</span>
+				<span> 
+					<div><img src="img/tupei.gif"/></div>
+					<h5>移距离</h5>
+				</span>
+			</div>
+		</div>
+		<!--<div class="mui-panel-header">
+			<button id='userPickerCancelBtn' class="mui-btn">取消</button>
+			<button id='userPickerOKBtn' class="mui-btn">确定</button>
+		</div>-->
+ 	</div>
+ 	<div class="mui-picker-panel1" id="oTimer">
+ 		<div class="timer-head">设置时间</div>
+ 		<div class="timer-jies">
+ 			<div class="home-left">
+				<h1>闹零</h1>
+				<h3>从零开始</h3>
+			</div>
+			<div class="home-right">
+				<h1 id="home-shijian">12:35</h1>
+				<h4>2015-05-28 星期四</h4>
+			</div>
+ 		</div>
+ 		<div class="timer-timer">
+ 			<img src="img/tupei.gif" />
+ 			<span class="timer-patent">10次</span>
+ 		</div>
+ 		<div class="timer-timer" id="pickTimeBtn">
+ 			<p>时间</p>
+ 			<span class="timer-patent" id="timer-setting">12:30</span>
+ 		</div>
+ 		<div class="timer-timer">
+ 			<p style="margin-left: -35px;">重复</p>
+ 			<span class="timer-saterday">周四 </span>
+ 		</div>
+ 		<div class="timer-timer" id="lingsheng">
+ 			<p style="margin-left: -35px;">铃声</p>
+ 			<span class="timer-patent" id="mingmingjiu">明明就</span>
+ 		</div>
+ 		<div class="home-bq">
+ 			<div class="mui-panel-header">
+				<button id='userPickerCancelBtn' class="mui-btn">取消</button>
+				<button id='userPickerOKBtn' class="mui-btn" onclick="play();">确定</button>
+			</div>
+ 		</div>
+ 	</div>
+ </div>
+ <script type="text/javascript" charset="utf-8">
+ var oTimer = document.getElementById("oTimer");
+(function($, doc) {
+	$.init();
+	$.ready(function() {
+		var mask = mui.createMask(_hidePickerPanel);
+		var currentPanel = null;
+		var showUserPickerBtn = doc.querySelector('#showUserPicker');
+		var moshi = doc.querySelector('.user-panel');
+		var  userPickerPanel = doc.querySelector('.mui-picker-panel1');
+		var userPickerOKBtn = doc.querySelector('#userPickerOKBtn'); 
+		var userPickerCancelBtn = doc.querySelector('#userPickerCancelBtn');
+		var currentPanel = null;
+		var showUserPanel = function() {
+//			mask.style.display = 'block';
+			mask.show();
+			currentPanel = userPickerPanel;
+			moshi.style.webkitTransform = 'translateY(0px)';
+		};
+		//关闭弹出的选择面板
+		function _hidePickerPanel () {
+			if(currentPanel){
+					currentPanel.style.webkitTransform = 'translateY(600px)';
+			}
+		}
+	  //关闭弹出的选择面板
+		function hidePickerPanel () {
+			_hidePickerPanel();
+			mask.close();
+		}
+		showUserPickerBtn.addEventListener('tap', showUserPanel, false);
+		//确定按钮的点击事件
+//		userPickerOKBtn.addEventListener('tap', function() {
+//			hidePickerPanel();
+//		}, false);
+		//取消按钮的点击事件
+		userPickerCancelBtn.addEventListener('tap', hidePickerPanel, false);
+					
+					
+	});
+})(mui, document);
+var oDiv = null;
+document.getElementById("yapyao").addEventListener('tap',function(){
+	var cHeight = document.documentElement.clientHeight;
+	var oDiv = document.createElement('div');
+	oDiv.style.height = (cHeight-180) +'px'
+	oDiv.className = "home-setting";
+	oDiv.innerHTML = "\
+	<div id='home-tixing'>\
+		<p>点击下面的按钮进行选择摇的次数</p>\
+		<div class='home-select'>\
+			<div class='home-scores' >5</div>\
+			<div class='home-scores' >10</div>\
+			<div class='home-scores' >15</div>\
+		</div>\
+		<div class='home-select'>\
+			<div class='home-scores' >20</div>\
+			<div class='home-scores' >25</div>\
+			<div class='home-scores' >30</div>\
+		</div>\
+		<div id='home-jilu'></div>\
+		<div id = 'showTimer'>确定</div>\
+	</div>\
+	"
+	document.getElementById("home-con").appendChild(oDiv);
+	var aScore = document.getElementsByClassName("home-scores");
+	var oScore = document.getElementById("home-jilu");
+	aScore[0].onclick = function(){
+		oScore.innerHTML = "你选择摇的次数是：5 次 ";
+	}
+	aScore[1].onclick = function(){
+		oScore.innerHTML = "你选择摇的次数是：10 次 ";
+	}
+	aScore[2].onclick = function(){
+		oScore.innerHTML = "你选择摇的次数是：15 次 ";
+	}
+	aScore[3].onclick = function(){
+		oScore.innerHTML = "你选择摇的次数是：20 次 ";
+	}
+	aScore[4].onclick = function(){
+		oScore.innerHTML = "你选择摇的次数是：25 次 ";
+	}
+	aScore[5].onclick = function(){
+		oScore.innerHTML = "你选择摇的次数是：30 次 ";
+	}
+	document.getElementById("showTimer").addEventListener('tap',function(){
+		oTimer.style.webkitTransform = 'translateY(0px)';
+	},false);
+	
+},false);
+var oInput = document.getElementById("timer-setting");
+document.getElementById("pickTimeBtn").addEventListener('tap',function(){
+	var dTime=new Date();
+	dTime.setHours(12,0);
+	plus.nativeUI.pickTime(function(e){
+		var d=e.date;
+		oInput.innerHTML =zhuan(d.getHours())+":"+zhuan(d.getMinutes());
+	},function (e){
+		oInput.innerHTML = "您没有选择时间" 
+	},{title:"请选择时间",is24Hour:true,time:dTime});
+},false)
+function zhuan(n){
+	if (n<10) {
+		 return '0'+n;
+	}
+	 else{
+		 return ''+ n;
+	};
+}
+ var oMinput = document.getElementById("mingmingjiu");
+document.getElementById("lingsheng").addEventListener('tap',function(){
+    oDiv = document.createElement('div');
+    var cHeight = document.documentElement.clientHeight;
+	var cWidth = document.documentElement.clientWidth;
+	var mask = document.createElement('div');
+	mask.style.width = cWidth + 'px';
+	mask.style.height = cHeight + 'px';
+	mask.style.top =-400 + 'px';
+	mask.style.position = 'absolute';
+	document.getElementById("oTimer").appendChild(mask);
+    oDiv.className = "chongfu";
+    oDiv.innerHTML = '\
+    <div>\
+    	<ul class="music">\
+    		<li>\
+    			<p>彩虹</p>\
+    			<button type="button" class="mui-btn mui-btn-outlined" id="1" onclick="xuanzhe(this.id);" >选择</button>\
+    		</li>\
+    		<li>\
+    			<p>搁浅</p>\
+    			<button type="button" class="mui-btn mui-btn-outlined" id="2" onclick="xuanzhe(this.id);" >选择</button>\
+    		</li>\
+    		<li>\
+    			<p>那些年</p>\
+    			<button type="button" class="mui-btn mui-btn-outlined" id="3" onclick="xuanzhe(this.id);" >选择</button>\
+    		</li>\
+    		<li>\
+    			<p>情歌</p>\
+    			<button type="button" class="mui-btn mui-btn-outlined" id="4" onclick="xuanzhe(this.id);" >选择</button>\
+    		</li>\
+    		<li>\
+    			<p>燃点</p>\
+    			<button type="button" class="mui-btn mui-btn-outlined" id="5" onclick="xuanzhe(this.id);" >选择</button>\
+    		</li>\
+    		<li>\
+    			<p>喜欢你</p>\
+    			<button type="button" class="mui-btn mui-btn-outlined" d="6">选择</button>\
+    		</li>\
+    	</ul>\
+    </div>'
+    var oConent = document.getElementById("oTimer");
+    oConent.appendChild(oDiv);  
+    oDiv.style.top = (cHeight -180 )/2 + 'px';
+},false);
+var  xuanzhe = function(id){
+	if (id == 1) {
+		oMinput.innerHTML = "彩虹";
+		console.log(oMinput.id);
+	}
+	else if(id == 2){
+		oMinput.innerHTML =" 搁浅";
+		console.log(oMinput.id);
+	}
+	else if(id == 3){
+		oMinput.innerHTML =" 那些年";
+		console.log(oMinput.id);
+	}
+	else if(id == 4){
+		oMinput.innerHTML =" 情歌";
+		console.log(oMinput.id);
+	}
+	else if(id == 5){
+		oMinput.innerHTML=" 燃点";
+		console.log(oMinput.id);
+	}
+	else if(id == 6){
+		oMinput.innerHTML =" 喜欢你";
+		console.log(oMinput.id);
+	}
+	oDiv.style.display = 'none';
+}
+var timer  = null;
+var play = function(){
+	alert("开始");
+// 扩展API加载完毕后调用onPlusReady回调函数 
+	function plusReady(){
+	// 获取音频目录对象
+		plus.io.resolveLocalFileSystemURL( "_doc/", function ( entry ) {
+			entry.getDirectory( "audio", {create:true}, function ( dir ) {
+			}, function ( e ) {
+				outSet( "Get directory \"audio\" failed: "+e.message );
+			} );
+		}, function ( e ) {
+			outSet( "Resolve \"_doc/\" failed: "+e.message );
+		} );
+	}
+	if(window.plus){
+		plusReady();
+	}else{
+		document.addEventListener("plusready",plusReady,false);
+	}
+	var oT= document.getElementById("timer-setting").innerHTML;
+	console.log("时间：" + oT);
+	var oTimer0 = oT[0];
+	var oTimer1 = oT[1];
+	var oTimer3 = oT[3];
+	var oTimer4 = oT[4];
+	var end_oHours = parseInt(oTimer0 + oTimer1);
+	console.log("小时：" +end_oHours);
+	var end_oMinute = parseInt(oTimer3 + oTimer4);
+	console.log('分钟：'+ end_oMinute);
+	var oDate = new Date();
+	var now_Hours = oDate.getHours();
+	var now_Minute = oDate.getMinutes();
+	var guanbi = (end_oHours * 60 + end_oMinute) - (now_Hours * 60 + now_Minute);
+	console.log("相差的时间：" + guanbi);
+	var  music = setInterval(function(){
+		guanbi = guanbi - 1;
+		if(guanbi == 0){
+			startPlay();
+			clearInterval(music);
+		}
+	},60000);
+
+}
+var p = null;
+function startPlay() {
+	alert("shdush")
+	
+	if ( plus.audio == undefined ) {
+		alert( "Device not ready!" );
+	}
+	else if(oMinput.id == 1){
+		console.log(oMinput.id);
+		p = plus.audio.createPlayer( "_www/Audio/caihong.mp3" );
+		p.play( function () {
+		}, function ( e ) {
+		} ); 
+	}
+	else if(oMinput.id == 2){
+		p = plus.audio.createPlayer( "_www/Audio/geqian.mp3" );
+		p.play( function () {
+		}, function ( e ) {
+		} ); 
+	}
+	else if(oMinput.id == 3){
+		p = plus.audio.createPlayer( "_www/Audio/naxienian.mp3" );
+		p.play( function () {
+		}, function ( e ) {
+		} ); 
+	}
+	else if(oMinput.id == 4){
+		p = plus.audio.createPlayer( "_www/Audio/qingge.mp3" );
+		p.play( function () {
+		}, function ( e ) {
+		} ); 
+	}
+	else if(oMinput.id == 5){
+		p = plus.audio.createPlayer( "_www/Audio/randian.mp3" );
+		p.play( function () {
+		}, function ( e ) {
+		} ); 
+	}
+	else if(oMinput.id == 6){
+		p = plus.audio.createPlayer( "_www/Audio/xihuanni.mp3" );
+		p.play( function () {
+		}, function ( e ) {
+		} ); 
+	}
+
+}
+function stopPlay() {
+	p.stop();
+}
+ </script>
+</body>
+</html>
